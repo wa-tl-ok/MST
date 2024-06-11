@@ -115,9 +115,9 @@ int main() {
 
         for (int i = 0; i < n; ++i) {
             if (cheapest[i] != -1) {
+                long long w = get<0>(edges[cheapest[i]]);
                 int u = get<1>(edges[cheapest[i]]);
                 int v = get<2>(edges[cheapest[i]]);
-                long long w = get<0>(edges[cheapest[i]]);
 
                 if (dsu.Union(u, v)) {
                     ans += w;
